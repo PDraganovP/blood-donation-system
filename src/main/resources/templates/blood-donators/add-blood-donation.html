@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragments.html::#head"></div>
+    <title>Добави кръводарение</title>
+</head>
+
+<body>
+<div>
+    <div th:include="fragments/fragments-users.html::#menu"></div>
+    <div class="row justify-content-center">
+        <div class="text-align-center">
+            <div class="d-inline-flex p-2">
+                <div class="mx-5">
+                    <form action="#" th:action="@{/add-blood-donation}" method="post">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-4"></div>
+                            <label for="date">Дата</label>
+                            <input type="date" class="form-control" id="date" name="date" th:value="date"
+                                   placeholder="Дата">
+                        </div>
+                        </br>
+                        <div class="row justify-content-center">
+                            <button name="donatorId" th:value="${id}" type="submit" class="btn btn-primary float-left "
+                                    id="button-color">Запиши
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+</html>

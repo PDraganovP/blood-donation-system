@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragments.html::#head"></div>
+    <title>Кръвопреливане</title>
+</head>
+<body>
+<div>
+    <div th:include="fragments/fragments.html::#menu"></div>
+    <div class="row justify-content-center">
+        <h3>Кръвопреливане</h3>
+        </br></br></br></br>
+    </div>
+    <div class="media">
+        <img class="ml-4 mr-3" src="../../images/menu/blood-donation10.jpg"
+             th:href="@{images/menu/blood-donation10.jpg}" alt="Generic placeholder image">
+        <div class="media-body">
+            <h5 class="mt-0">Кръвопреливане</h5>
+            <p5>
+                Кръвопреливането (на латински:<i> haemotransfusio, хемотрансфузия</i>) е процедура, при която се
+                прехвърлят кръв или кръвни продукти в кръвоносната система на човека.
+                Кръвопреливането може да бъде наложено от директна заплаха за живота в някои ситуации, например
+                значителна загуба на кръв поради травма или начин за компенсиране на кръвта, загубена по време на
+                операция. Това е животоспасяваща манипулация, която може да се извърши само с кръв от дарител, който има
+                съвместима с кръвта на приемателя кръвна група. Съобразява се със системата АВ0 и Rh.
+                При несъответствие на кръвната група или неспазване на мерките за безопасно кръвопреливане, могат да
+                настъпят различни по степен усложнения, известни като хемотрансфузионни усложнения.
+            </p5>
+        </div>
+    </div>
+    <div class="media mt-4">
+
+        <div class="media-body ml-4 mr-3">
+            <h5 class="mt-0">Видове кръвопреливане</h5>
+            <p5>
+                Някога кръвопреливането се е осъществява чрез директно пренасяне на кръвта от дарителя към приемателя
+                (директно кръвопреливане). С развитието на медицината и методите за вземане и консервиране на кръв, е
+                станало възможно кръвта да бъде предварително взета от дарителя, за да бъде прелята на по-късен етап в
+                кръвоносната система на приемателя (индиректно кръвопреливане).
+                Днес директното кръвопреливане има само историческа стойност, а в практиката се използват методите на
+                индиректното кръвопреливане.
+                Според вида на източника, кръвопреливането може да бъде хетероложно и автоложно. При хетероложното
+                кръвопреливане се прелива кръв от един човек на друг. Автоложното кръвопреливане представлява внасянето
+                на предварително взета собствена кръв.
+            </p5>
+        </div>
+        <img class="ml-4 mr-3" src="../../images/menu/blood-donation9.jpg" th:href="@{images/menu/blood-donation9.jpg}"
+             alt="Generic placeholder image">
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+</html>

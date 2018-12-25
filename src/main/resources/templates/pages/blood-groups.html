@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragments.html::#head"></div>
+    <title>Кръвни групи</title>
+</head>
+<body>
+<div>
+    <div>
+        <div th:include="fragments/fragments.html::#menu"></div>
+        <div class="row justify-content-center">
+            <h4>Кръвни групи</h4>
+            </br></br>
+        </div>
+        <div>
+            <dl class="mx-4">
+                <dt>Кръвна група</dt>
+                <dd>съдържа информация за еритроцитите (червените кръвни телца) на даден индивид. Тя зависи от
+                    веществата
+                    (въглеводороди и белтъци) в клетъчната мембрана. Три от най-важните белега са A, B и 0 (AB0) и
+                    резус-факторът (Rh). Има още 46 познати антигена, повечето от които са доста по-рядко срещани в
+                    сравнение с AB0 и Rh. Преливането на кръв от човек с дадена кръвна група на друг човек с различна
+                    кръвна
+                    група може да предизвика имунна реакция, която да доведе до хемолитична анемия, бъбречна
+                    недостатъчност,
+                    шок и смърт.
+                </dd>
+            </dl>
+            <p5 class="mx-4">
+                Съществуват четири допустими комбинации, които определят кръвната група:
+            </p5>
+            <ol>
+                <li>α и β: първа (0)</li>
+                <li>A и β: втора (A)</li>
+                <li>B и α: трета (B)</li>
+                <li>A и B: четвърта (AB)</li>
+            </ol>
+            <p5 class="mx-4">Според резус-фактора кръвните групи се делят на положителни и отрицателни.</p5>
+        </div>
+        </br>
+        <div class="container">
+            <table class="table table-bordered table-red" style="border-color:red">
+                <caption>Таблица за съвместимост на червените кръвни клетки</caption>
+                <thead>
+                <tr>
+                    <th rowspan="2" style="vertical-align:middle">Получател</th>
+                    <th colspan="8">Кръводарител</th>
+                </tr>
+                <tr>
+                    <th>O-</th>
+                    <th>O+</th>
+                    <th>A-</th>
+                    <th>A+</th>
+                    <th>B-</th>
+                    <th>B+</th>
+                    <th>AB-</th>
+                    <th>AB+</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>O-</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                </tr>
+                <tr>
+                    <th>O+</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                </tr>
+                <tr>
+                    <th>A-</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                </tr>
+                <tr>
+                    <th>A+</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                </tr>
+                <tr>
+                    <th>B-</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                </tr>
+                <tr>
+                    <th>B+</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                </tr>
+                <tr>
+                    <th>AB-</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/x.png" th:src="@{/images/menu/x.png}"></td>
+                </tr>
+                <tr>
+                    <th>AB+</th>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                    <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+</html>

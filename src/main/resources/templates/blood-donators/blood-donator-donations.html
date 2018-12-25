@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragments.html::#head"></div>
+    <title>Кръводарител</title>
+</head>
+<body>
+<div>
+    <div th:include="fragments/fragments-users.html::#menu"></div>
+
+    <table class="table table-hover table-red">
+        <caption>Кръводарения</caption>
+        <thead>
+        <tr>
+            <form action="#" th:action="@{/find-blood-donator-by-username}" method="post">
+                <th colspan="2">
+                    <input type="text" class="form-control" id="username" name="username"
+                           th:value="${username}" placeholder="Потребителско име">
+                </th>
+                <th colspan="4"></th>
+                <th colspan="1">
+                    <button type="submit" class="btn btn-white">Търси</button>
+                </th>
+            </form>
+        </tr>
+        <tr>
+            <th>Град</th>
+            <th>Име</th>
+            <th>Фамилия</th>
+            <th>Кръвна група</th>
+            <th>Активен кръводарител</th>
+            <th>Резус фактор</th>
+            <th>Брой кръводарения</th>
+        </tr>
+        </thead>
+        <tbody th:if="${bloodDonator}">
+        <tr th:object="${bloodDonator}">
+            <td th:text="*{city}"></td>
+            <td th:text="*{firstName}"></td>
+            <td th:text="*{lastName}"></td>
+            <td th:text="*{bloodGroup}"></td>
+            <td th:text="*{activeBloodDonator} ? 'ДА' : 'НЕ'"></td>
+            <td th:text="*{rhPositive} ? 'ДА' : 'НЕ'"></td>
+            <td th:text="*{numberOfBloodDonation}"></td>
+        </tr>
+        <tr>
+        <tr>
+            <th>#</th>
+            <th colspan="6">Дата на кръводарение</th>
+        </tr>
+        <tr th:each="bloodDonation,iter:${bloodDonations}" th:object="${bloodDonation}">
+            <td th:text="${iter.count}"></td>
+            <td colspan="6" th:text="*{#dates.format(bloodDonationDate, 'dd/MMMM/yyyy')}"></td>
+        </tr>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+</html>

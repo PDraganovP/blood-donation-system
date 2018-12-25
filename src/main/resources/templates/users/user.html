@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragments.html::#head"></div>
+    <title>Потребител</title>
+</head>
+<body>
+<div>
+    <div th:include="fragments/fragments-users.html::#menu"></div>
+    <table class="table table-hover table-red">
+        <caption>Потребител</caption>
+        <thead>
+        <tr>
+            <form action="#" th:action="@{/menu-admin}" method="post">
+                <th colspan="2">
+                    <input type="text" class="form-control" id="username" name="username"
+                           th:value="${username}" placeholder="Търси потребител">
+                </th>
+                <th colspan="3"></th>
+                <th colspan="2">
+                    <button type="submit" class="btn btn-white">Търси</button>
+                </th>
+            </form>
+        </tr>
+        <tr>
+            <th colspan="2">Потребител</th>
+            <th colspan="2">Роля</th>
+            <th>Промени роля</th>
+            <th colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody th:if="${user}">
+        <tr th:object="${user}">
+            <td colspan="2" th:text="*{username}"></td>
+            <td colspan="2" th:text="${user.role.role}"></td>
+            <form action="#" th:action="@{/change-role}" method="post">
+                <td>
+                    <select id="role" class="form-control" name="role" style="color:red"> <!--th:field="${role}"-->
+                        <option th:each="role:${roles}" th:object="${role}"
+                                th:value="*{role}" th:text="*{role}"></option>
+                    </select>
+                </td>
+                <td colspan="2">
+                    <button name="username" th:value="*{username}" type="submit" class="btn btn-white">Промени</button>
+                </td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
