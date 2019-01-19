@@ -11,6 +11,58 @@ color: white;
 color: white;
 }
 
+h5,h3,p5,h6{
+color:red;
+}
+h4,h6{
+padding-top:10px;
+color:red;
+}
+.ul-color{
+color:red;
+}
+#button-color{
+background-color:red;
+}
+dl,ol{
+color:red;
+}
+.col-md-2,.col-md-10{
+border:solid;
+border-color:red;
+}
+tr th,tr td,caption{
+text-align:center;
+vertical-align:middle;
+}
+table-bordered{
+border:solid;
+}
+label{
+color:red;
+}
+.body-color{
+background-color: #e3f2fd;
+}
+p6{
+color:green;
+}
+
+
+/*
+body{
+background-color: #e3f2fd;
+max-width: 100%;
+overflow-x: hidden;
+}
+.list-group-item{
+background-color: red;
+color: white;
+}
+.nav-link{
+color: white;
+}
+
 h5,h3,p5{
 color:red;
 }
@@ -52,6 +104,7 @@ a:hover {
   color: red;
 }
 
+*/
 
 
 

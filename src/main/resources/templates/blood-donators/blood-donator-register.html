@@ -17,21 +17,21 @@
                             <label for="username">Потребителско име</label>
                             <input type="text" class="form-control" id="username" name="username" th:value="*{username}"
                                    placeholder="Потребителско име">
-                            <p6 th:if="${usernameError}" th:text="${usernameError}"></p6>
+                            <p th:if="${usernameError}" th:text="${usernameError}"></p>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="firstName">Име</label>
                                 <input type="text" class="form-control" id="firstName" name="firstName"
                                        th:value="*{firstName}" placeholder="Име">
-                                <p6 th:if="${firstNameError}" th:text="${firstNameError}"></p6>
+                                <p th:if="${firstNameError}" th:text="${firstNameError}"></p>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="lastName">Фамилия</label>
                                 <input type="text" class="form-control" id="lastName" name="lastName"
                                        th:value="*{lastName}"
                                        placeholder="Фамилия">
-                                <p6 th:if="${lastNameError}" th:text="${lastNameError}"></p6>
+                                <p th:if="${lastNameError}" th:text="${lastNameError}"></p>
                             </div>
                         </div>
                         <div class="form-row">
@@ -40,13 +40,13 @@
                                 <input type="password" class="form-control" id="password" name="password"
                                        th:value="${password}"
                                        placeholder="Парола">
-                                <p6 th:if="${passwordError}" th:text="${passwordError}"></p6>
+                                <p th:if="${passwordError}" th:text="${passwordError}"></p>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="email">Имейл</label>
                                 <input type="email" class="form-control" id="email" name="email" th:value="*{email}"
                                        placeholder="Имейл">
-                                <p6 th:if="${emailError}" th:text="${emailError}"></p6>
+                                <p th:if="${emailError}" th:text="${emailError}"></p>
                             </div>
                         </div>
                         <div class="form-row">
@@ -54,14 +54,14 @@
                                 <label for="phone">Тел.</label>
                                 <input type="text" class="form-control" id="phone" name="phone" th:value="*{phone}"
                                        placeholder="Тел.">
-                                <p6 th:if="${phoneError}" th:text="${phoneError}"></p6>
+                                <p th:if="${phoneError}" th:text="${phoneError}"></p>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="fax">Факс</label>
                                 <input type="text" class="form-control" id="fax" name="fax"
                                        th:value="${fax}"
                                        placeholder="Факс">
-                                <p6 th:if="${faxError}" th:text="${faxError}"></p6>
+                                <p th:if="${faxError}" th:text="${faxError}"></p>
                             </div>
                         </div>
                         <div class="form-row">
@@ -69,7 +69,7 @@
                                 <label for="age">Години</label>
                                 <input type="text" class="form-control" id="age" name="age" th:value="*{age}"
                                        placeholder="Години">
-                                <p6 th:if="${ageError}" th:text="${ageError}"></p6>
+                                <p th:if="${ageError}" th:text="${ageError}"></p>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="sex">Пол</label>
@@ -77,7 +77,7 @@
                                     <option th:value="MALE">Мъж</option>
                                     <option th:value="FEMALE">Жена</option>
                                 </select>
-                                <p6 th:if="${sexError}" th:text="${sexError}"></p6>
+                                <p th:if="${sexError}" th:text="${sexError}"></p>
                             </div>
                         </div>
                         <div class="form-group">
@@ -113,26 +113,26 @@
                                 <option th:value="Шумен">Шумен</option>
                                 <option th:value="Ямбол">Ямбол</option>
                             </select>
-                            <p6 th:if="${regionError}" th:text="${regionError}"></p6>
+                            <p th:if="${regionError}" th:text="${regionError}"></p>
                         </div>
                         <div class="form-group">
                             <label for="municipality">Община</label>
                             <input type="text" class="form-control" id="municipality" name="municipality"
                                    th:value="*{municipality}"
                                    placeholder="Община">
-                            <p6 th:if="${municipalityError}" th:text="${municipalityError}"></p6>
+                            <p th:if="${municipalityError}" th:text="${municipalityError}"></p>
                         </div>
                         <div class="form-group">
                             <label for="city">Град</label>
                             <input type="text" class="form-control" id="city" name="city" th:value="${city}"
                                    placeholder="Град">
-                            <p6 th:if="${cityError}" th:text="${cityError}"></p6>
+                            <p th:if="${cityError}" th:text="${cityError}"></p>
                         </div>
                         <div class="form-group">
                             <label for="street">Улица</label>
                             <input type="text" class="form-control" id="street" name="street" th:value="*{street}"
                                    placeholder="Улица">
-                            <p6 th:if="${streetError}" th:text="${streetError}"></p6>
+                            <p th:if="${streetError}" th:text="${streetError}"></p>
                         </div>
                         <div class="form-group">
                             <label for="bloodGroup">Кръвна група</label>
@@ -142,7 +142,7 @@
                                 <option th:value="AB">AB</option>
                                 <option th:value="O">0</option>
                             </select>
-                            <p6 th:if="${bloodGroupError}" th:text="${bloodGroupError}"></p6>
+                            <p th:if="${bloodGroupError}" th:text="${bloodGroupError}"></p>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -153,7 +153,7 @@
                                     <label class="form-check-label" for="activeBloodDonator">
                                         Активен кръводарител
                                     </label>
-                                    <p6 th:if="${activeBloodDonatorError}" th:text="${activeBloodDonatorError}"></p6>
+                                    <p th:if="${activeBloodDonatorError}" th:text="${activeBloodDonatorError}"></p>
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
@@ -164,7 +164,7 @@
                                     <label class="form-check-label" for="rhPositive">
                                         Резус фактор положителен
                                     </label>
-                                    <p6 th:if="${rhPositiveDonatorError}" th:text="${rhPositiveDonatorError}"></p6>
+                                    <p th:if="${rhPositiveDonatorError}" th:text="${rhPositiveDonatorError}"></p>
                                 </div>
                             </div>
                         </div>

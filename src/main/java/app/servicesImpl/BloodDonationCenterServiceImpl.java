@@ -84,8 +84,12 @@ public class BloodDonationCenterServiceImpl implements BloodDonationCenterServic
         user.setBloodDonationCenter(bloodDonationCenter);
         this.userRepository.save(user);
 
-        Role role = this.roleRepository.findByRole(ROLE);
-        userRepository.setRole(role, user.getId());
+        Role role=new Role();
+        role.setRole("USER");
+        this.roleRepository.save(role);
+
+        Role userRole = this.roleRepository.findByRole(role.getRole());
+        userRepository.setRole(userRole, user.getId());
 
 
         Contact contact = this.modelMapper.map(bloodDonationCenterRegistrationModel, Contact.class);

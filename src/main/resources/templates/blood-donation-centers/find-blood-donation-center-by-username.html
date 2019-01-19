@@ -16,7 +16,7 @@
                             <label for="username">Потребителско име</label>
                             <input type="text" class="form-control" id="username" name="username"
                                    th:value="${username}" placeholder="Потребителско име">
-                            <p6 th:if="${error}" th:text="${error}"> </p6>
+                            <p th:if="${error}" th:text="${error}"> </p>
                         </div>
                         <div class="row justify-content-center">
                             <button type="submit" class="btn btn-primary float-left " id="button-color">Търсене

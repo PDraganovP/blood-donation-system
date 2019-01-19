@@ -81,7 +81,7 @@ color:green;
             <div class="row justify-content-end">
                 <form th:action="@{/logout}" method="post">
                     <div th:if="${#httpServletRequest.remoteUser}" class="mr-4">
-                        <p6 th:inline="text" style="color:white">Здравей [[${#httpServletRequest.remoteUser}]] !</p6>
+                        <p th:inline="text" style="color:white">Здравей [[${#httpServletRequest.remoteUser}]] !</p>
                         <button class="btn btn-white" type="submit">Изход</button>
                     </div>
                 </form>

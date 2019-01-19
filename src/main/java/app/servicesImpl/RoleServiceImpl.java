@@ -34,4 +34,10 @@ public class RoleServiceImpl implements RoleService {
         List<Role> roles = (List<Role>) this.roleRepository.findAll();
         return roles;
     }
+    private void save(){
+        Role role=new Role();
+        role.setRole("BLOOD DONATOR");
+        this.roleRepository.save(role);
+
+    }
 }
