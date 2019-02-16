@@ -29,7 +29,7 @@ public class BloodDonation {
     public void setBloodDonationDate(Date bloodDonationDate) {
         this.bloodDonationDate = bloodDonationDate;
     }
-    @ManyToOne(targetEntity = BloodDonator.class,cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = BloodDonator.class)
     public BloodDonator getBloodDonator() {
         return bloodDonator;
     }

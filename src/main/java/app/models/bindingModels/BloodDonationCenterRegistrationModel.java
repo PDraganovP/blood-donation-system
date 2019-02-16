@@ -1,6 +1,7 @@
 package app.models.bindingModels;
 
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class BloodDonationCenterRegistrationModel {
@@ -40,6 +41,7 @@ public class BloodDonationCenterRegistrationModel {
         this.username = username;
     }
 
+    @Size(min = 10, max = 15, message = "Кода от Министерството на Здравеопазването трябва да е между 10 и 15 символа")
     public String getUniqueCodeFromMinistryOfHeath() {
         return uniqueCodeFromMinistryOfHeath;
     }
@@ -57,6 +59,7 @@ public class BloodDonationCenterRegistrationModel {
         this.password = password;
     }
 
+    @NotNull(message = "Полето е задължително за попълване!")
     public String getRegion() {
         return region;
     }
@@ -65,7 +68,7 @@ public class BloodDonationCenterRegistrationModel {
         this.region = region;
     }
 
-    @Size(min = 3, max = 40, message = "Полето трябва да се попълни")
+    @Size(min = 3, max = 40, message = "Общината трябва да е между 3 и 40 символа")
     public String getMunicipality() {
         return municipality;
     }
@@ -74,7 +77,7 @@ public class BloodDonationCenterRegistrationModel {
         this.municipality = municipality;
     }
 
-    @Size(min = 1, max = 40, message = "Полето трябва да се попълни")
+    @Size(min = 3, max = 40, message = "Града трябва да е между 3 и 40 символа")
     public String getCity() {
         return city;
     }
@@ -83,7 +86,7 @@ public class BloodDonationCenterRegistrationModel {
         this.city = city;
     }
 
-    @Size(min = 5, max = 40, message = "Полето е трябва да се попълни")
+    @Size(min = 3, max = 40, message = "Улицата трябва да е между 3 и 40 символа")
     public String getStreet() {
         return street;
     }
@@ -93,7 +96,7 @@ public class BloodDonationCenterRegistrationModel {
     }
 
 
-    @Size(min = 1, max = 35, message = "Полето трябва да се попълни")
+    @Size(min = 5, max = 40, message = "Имейла трябва да е между 5 и 40 символа")
     public String getEmail() {
         return email;
     }
@@ -102,7 +105,7 @@ public class BloodDonationCenterRegistrationModel {
         this.email = email;
     }
 
-    @Size(min = 5, max = 15, message = "Полето трябва да се попълни")
+    @Size(min = 5, max = 15, message = "Телефона трябва да е между 5 и 15 символа")
     public String getPhone() {
         return phone;
     }

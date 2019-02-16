@@ -1,0 +1,263 @@
+html {
+  height: 100%;
+}
+body{
+  position: relative;
+  background-color: #e3f2fd;
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding-bottom: 6rem;
+}
+.list-group-item{
+  background-color: red;
+  color: white;
+}
+h5,h3,p,h6{
+  color:red;
+}
+h4,h6{
+padding-top:10px;
+  color:red;
+}
+.ul-color{
+  color:red;
+}
+.button-color{
+  background-color:red;
+}
+.button-color:hover{
+  background-color:green;
+}
+dl,ol{
+  color:red;
+}
+.col-md-2,.col-md-10{
+  border:solid;
+  border-color:red;
+}
+tr th,tr td,caption{
+  text-align:center;
+  vertical-align:middle;
+}
+ table-bordered{
+ border:solid;
+}
+label{
+ color:red;
+}
+.body-color{
+  background-color: #e3f2fd;
+}
+.inline-block{
+display:inline-block;
+}
+.table-red,
+.table-red > th,
+.table-red > td {
+  background-color: red;
+  color:white;
+}
+.table-red,
+.table-red > th,
+.table-red > td {
+  background-color: red;
+}
+.table-hover .table-red:hover {
+  background-color: #b9bbbe;
+}
+.table-hover .table-red:hover > td,
+.table-hover .table-red:hover > th {
+  background-color: #b9bbbe;
+}
+.table-red {
+  color: #fff;
+  background-color: red;
+}
+#blood-donation-center-table td,.th th{
+  width: 16%;
+}
+.table-red th,
+.table-red td,
+.table-red thead th {
+  border-color: #b6fcc3;
+  text-align:center;
+  vertical-align:middle;
+}
+.table-red.table-bordered {
+  border: 0;
+}
+.table-red.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.table-red.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+.btn-red {
+  color: white;
+  background-color: red;
+  border-color: #dc3545;
+}
+.btn-red:hover {
+  color: #fff;
+  background-color: green;
+  border-color: #bd2130;
+}
+.bg-red {
+  background-color: red !important;
+}
+a:hover {
+  text-decoration: none;
+}
+.dropdown-item{
+color:red;
+}
+.dropdown-item:hover{
+  color: green;
+}
+.btn-white{
+  color:red;
+  background-color:white;
+  border-radius:5px;
+}
+.btn-white:hover{
+  color:white;
+  background-color:green;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  border:0.001em white solid;
+  color:white;
+  border-color:white;
+}
+.navbar-toggler {
+  background-color:white;
+}
+nav.navbar {
+  text-transform:uppercase;
+}
+.margin-bottom{
+  margin-bottom:0;
+}
+.white-color{
+  color:white;
+}
+.btn-padding{
+  padding:8px 8px;
+}
+.navbar-img{
+  border-radius: .4em;
+}
+.form-control:focus,
+.btn:focus{
+  border-color:red;
+  box-shadow: none;
+}
+.center{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+p,li{
+  text-align:justify;
+}
+.justify {
+  text-align: justify;
+}
+.max-width{
+  max-width:400px;
+}
+.home #home,
+.blood-donator #donator,
+.blood-donation-center #donation-center,
+.helpful #helpful{
+  border:0.001em white solid;
+  color:white;
+  border-color:white;
+}
+.inline-block{
+  display:inline-block;
+}
+.position-relative{
+  position:relative;
+}
+.position-absolute{
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0.8;
+}
+.position-absolute h3{
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  color:#f8f9fa;
+}
+.position-relative:hover .position-absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  background-color: red;
+  color: white;
+}
+.position-relative:hover .position-absolute h3{
+  position: absolute;
+  bottom:40;
+  top:40%;
+  left:0;
+  opacity: 1;
+  color: white;
+}
+div .position-relative {
+  margin:25px;
+}
+.footer{
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding: 1rem;
+  margin-top:40px;
+  height:50px;
+  background-color: red;
+}
+.footer p{
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0;
+  bottom:13px;
+  color:white;
+  text-align:center;
+}
+input + p{
+  color:green;
+}
+th input[type="text"] {
+  display:inline-block;
+  width:80%;
+  border-radius:5px 0px 0px 5px;
+
+}
+th button[type="submit"]{
+  float:right;
+  width:20%;
+  border-radius: 0px 5px 5px 0px;
+}
+.min-width-search{
+  min-width:350px;
+}
+.max-width-search{
+  max-width:450px;
+}
+

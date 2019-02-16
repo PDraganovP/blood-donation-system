@@ -66,7 +66,7 @@ public class Address {
         this.street = street;
     }
 
-    @OneToOne()
+    @OneToOne
     public BloodDonationCenter getBloodDonationCenter() {
         return bloodDonationCenter;
     }

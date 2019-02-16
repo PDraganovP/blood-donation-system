@@ -48,7 +48,7 @@ public class Contact  implements Comparable<Contact> {
         this.fax = fax;
     }
 
-    @ManyToOne(targetEntity = BloodDonationCenter.class,cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = BloodDonationCenter.class)
     public BloodDonationCenter getBloodDonationCenter() {
         return bloodDonationCenter;
     }
@@ -56,7 +56,7 @@ public class Contact  implements Comparable<Contact> {
     public void setBloodDonationCenter(BloodDonationCenter bloodDonationCenter) {
         this.bloodDonationCenter = bloodDonationCenter;
     }
-    @ManyToOne(targetEntity = BloodDonator.class,cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = BloodDonator.class)
     public BloodDonator getBloodDonator() {
         return bloodDonator;
     }

@@ -40,7 +40,7 @@ public class BloodDonatorRegistrationModel {
         this.username = username;
     }
 
-    @Size(min = 2, max = 20, message = "Името трябва да е между 2 и 20 символа")
+    @Size(min = 2, max = 30, message = "Името трябва да е между 2 и 30 символа")
     public String getFirstName() {
         return firstName;
     }
@@ -49,7 +49,7 @@ public class BloodDonatorRegistrationModel {
         this.firstName = firstName;
     }
 
-    @Size(min = 2, max = 20, message = "Фамилията трябва да е между 2 и 20 символа")
+    @Size(min = 2, max = 30, message = "Фамилията трябва да е между 2 и 30 символа")
     public String getLastName() {
         return lastName;
     }
@@ -103,7 +103,7 @@ public class BloodDonatorRegistrationModel {
         isRhPositive = rhPositive;
     }
 
-    @Size(min = 1, max = 40, message = "Полето трябва да се попълни")
+    @Size(min = 5, max = 40, message = "Имейла трябва да е между 5 и 40 символа")
     public String getEmail() {
         return email;
     }
@@ -112,7 +112,7 @@ public class BloodDonatorRegistrationModel {
         this.email = email;
     }
 
-    @Size(min = 5, max = 15, message = "Полето трябва да се попълни")
+    @Size(min = 5, max = 15, message = "Телефона трябва да е между 5 и 15 символа")
     public String getPhone() {
         return phone;
     }
@@ -147,7 +147,7 @@ public class BloodDonatorRegistrationModel {
         this.region = region;
     }
 
-    @Size(min = 3, max = 40, message = "Полето трябва да се попълни")
+    @Size(min = 3, max = 40, message = "Общината трябва да е между 3 и 40 символа")
     public String getMunicipality() {
         return municipality;
     }
@@ -156,7 +156,7 @@ public class BloodDonatorRegistrationModel {
         this.municipality = municipality;
     }
 
-    @Size(min = 3, max = 40, message = "Полето трябва да се попълни")
+    @Size(min = 3, max = 40, message = "Града трябва да е между 3 и 40 символа")
     public String getCity() {
         return city;
     }
@@ -165,7 +165,7 @@ public class BloodDonatorRegistrationModel {
         this.city = city;
     }
 
-    @Size(min = 3, max = 40, message = "Полето трябва да се попълни")
+    @Size(min = 3, max = 40, message = "Улицата трябва да е между 3 и 40 символа")
     public String getStreet() {
         return street;
     }

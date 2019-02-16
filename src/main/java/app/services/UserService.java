@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 @Service
 public interface UserService extends UserDetailsService {
 
-   User findUser(String username,String password);
+    User findUser(String username, String password);
 
-   User findByUsername(String username);
+    User findByUsername(String username);
 
-   void setRole(Role role,long userId);
+    void setRole(Role role, long userId);
 }

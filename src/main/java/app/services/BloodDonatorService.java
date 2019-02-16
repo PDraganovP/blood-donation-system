@@ -3,7 +3,7 @@ package app.services;
 import app.entities.Address;
 import app.entities.BloodDonator;
 import app.models.bindingModels.BloodDonatorRegistrationModel;
-import app.models.bindingModels.EditBloodDonatorBindingModel;
+import app.models.bindingModels.BloodDonatorBindingModel;
 import app.models.viewModels.BloodDonatorViewModel;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +31,7 @@ public interface BloodDonatorService {
 
     void addBloodDonation(long id, String date) throws ParseException;
 
-    void edit(EditBloodDonatorBindingModel editBloodDonatorBindingModel);
+    void edit(BloodDonatorBindingModel bloodDonatorBindingModel);
 
     List<BloodDonatorViewModel> findBloodDonator(long id);
 

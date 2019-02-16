@@ -56,7 +56,7 @@ public class BloodDonatorController {
         }
 
         this.bloodDonatorService.save(bloodDonatorRegistrationModel, bloodDonationCenterName);
-        return "successful";
+        return "successfully-completed";
     }
 
     @GetMapping("/findAll")
@@ -66,9 +66,9 @@ public class BloodDonatorController {
         return "findAll";
     }
 
-    @GetMapping("/successful")
+    @GetMapping("/successfully-completed")
     public String secc() {
-        return "successful";
+        return "successfully-completed";
     }
 
     @GetMapping("/find-blood-donator-by-first-name")
@@ -79,6 +79,9 @@ public class BloodDonatorController {
     @PostMapping("/find-blood-donator-by-first-name")
     public String findDonatorByFirstName(Model model, String firstName) {
         List<BloodDonatorViewModel> bloodDonatorList = this.bloodDonatorService.findByFirstName(firstName);
+        if(bloodDonatorList.isEmpty()){
+            return "blood-donators/find-blood-donator-by-first-name";
+        }
         model.addAttribute("bloodDonatorList", bloodDonatorList);
         return "blood-donators/find-blood-donator-by-first-name";
     }
@@ -147,6 +150,9 @@ public class BloodDonatorController {
     public String getBloodDonatorInfo(HttpServletRequest req, Model model) {
         String username = req.getRemoteUser();
         BloodDonatorViewModel bloodDonator = this.bloodDonatorService.findBloodDonatorByUsername(username);
+        if (bloodDonator == null) {
+            return "unsuccessfully-completed";
+        }
         model.addAttribute("bloodDonator", bloodDonator);
 
         return "blood-donators/blood-donator-info";
@@ -173,7 +179,7 @@ public class BloodDonatorController {
 
         this.bloodDonatorService.editBloodDonatorById(firstName, lastName, age, isActiveBloodDonator, address, id);
 
-        return "successful-edit";
+        return "successfully-edited";
     }
 }
 

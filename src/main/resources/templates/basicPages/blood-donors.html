@@ -6,20 +6,20 @@
 </head>
 <div>
     <div th:include="fragments/fragments.html::#menu"></div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-4">
         <h3>Кръводарители</h3>
     </div>
     </br></br>
     <div>
-        <p class="mx-4">Съществуват три основни вида кръводарители:</p>
+        <h5 class="mx-4">Съществуват три основни вида кръводарители:</h5>
         <br/>
-        <ul class="ul-color">
+        <ul class="ul-color mx-4">
             <li>Доброволни кръводарители.</li>
             <li>Близки и/или роднини на нуждаещият се от кръв.</li>
             <li>Кръводарители срещу възнаграждение.</li>
         </ul>
-        <div class="mx-4">
-            <p>
+        <div>
+            <p class="mx-4">
                 Адекватното и надеждно предоставяне на безопасна кръв може да бъде осигурено от стабилна група от
                 редовни,
                 доброволни, неплатени кръводарители. Тези кръводарители са и най-сигурната група от донори, тъй като
@@ -30,12 +30,12 @@
             </p>
         </div>
         </br>
-        <p class="mx-4">Данните, докладвани на СЗО(Световната здравна организация), показват значително увеличение на
+        <h5 class="mx-4">Данните, докладвани на СЗО(Световната здравна организация), показват значително увеличение на
             доброволното неплатено кръводаряване в страни с
             ниски и средни доходи:
-        </p>
+        </h5>
         </br>
-        <ul class="ul-color">
+        <ul class="ul-color mx-4">
             <li>Увеличаването на 10,7 милиона дарения от доброволни неплатени донори от 2008 до 2013 г. е съобщено от
                 159
                 страни. Най-голямо увеличение на доброволното безвъзмездно кръводаряване е в Югоизточна Азия (75%) и
@@ -57,15 +57,6 @@
         </ul>
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+<div th:include="fragments/fragments.html::#footer" class="footer"></div>
 </body>
 </html>

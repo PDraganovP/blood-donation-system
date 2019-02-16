@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragments.html::#head"></div>
+    <title>Начална страница</title>
+</head>
+<body class="home">
+<div>
+    <div th:include="fragments/fragments.html::#menu"></div>
+    <div class="mx-5 mt-4">
+        <div id="fluid" class="content container-fluid">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="inline-block position-relative">
+                            <img src="../../public/images/menu/blood-donation2.jpg"
+                                 th:src="@{/images/menu/blood-donation2.jpg}" alt="blood-testing"/>
+                            <a href="blood-testing" th:href="@{blood-testing}" class="position-absolute">
+                                <h3 class="position-absolute">Изследване на дарената кръв</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inline-block position-relative">
+                            <img src="../../public/images/menu/blood-donation3.jpg"
+                                 th:src="@{/images/menu/blood-donation3.jpg}" alt="blood-donation-center"/>
+                            <a href="blood-donation-center" th:href="@{blood-donation-center}"
+                               class="position-absolute">
+                                <h3>Национален център по трансфузионна хематология</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inline-block position-relative">
+                            <img src="../../public/images/menu/blood-donation4.jpg"
+                                 th:src="@{/images/menu/blood-donation4.jpg}" alt="blood-groups"/>
+                            <a href="blood-groups" th:href="@{blood-groups}" class="position-absolute">
+                                <h3>Кръвни групи</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="inline-block position-relative">
+                            <img src="../../public/images/menu/blood-donation5.jpg"
+                                 th:src="@{/images/menu/blood-donation5.jpg}" alt="blood-recipients"/>
+                            <a href="blood-recipients" th:href="@{blood-recipients}" class="position-absolute">
+                                <h3>Рецепиенти</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inline-block position-relative">
+                            <img src="../../public/images/menu/blood-donation6.jpg"
+                                 th:src="@{/images/menu/blood-donation6.jpg}" alt="blood-donors">
+                            <a href="blood-donors" th:href="@{blood-donors}" class="position-absolute">
+                                <h3>Кръводарители</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="inline-block position-relative">
+                            <img src="../../public/images/menu/blood-donation7.jpg"
+                                 th:src="@{/images/menu/blood-donation7.jpg}" alt="blood-transfusion"/>
+                            <a href="blood-transfusion" th:href="@{blood-transfusion}" class="position-absolute">
+                                <h3>Кръвопреливане</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="fragments/fragments.html::#footer" class="footer"></div>
+</body>
+</html>

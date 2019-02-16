@@ -2,65 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <th:block id="head">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../static/bootstrap/css/style.css" th:href="@{bootstrap/css/style.css}"/>
-        <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.css"
-              th:href="@{bootstrap/css/bootstrap.css}"/>
-        <link rel="icon" href="../../static/images/menu/blood-donation-favicon.ico"
-              th:href="@{images/menu/blood-donation-favicon.ico}"/>
-        <style>
-        body{
-background-color: #e3f2fd;
-max-width: 100%;
-overflow-x: hidden;
-}
-.list-group-item{
-background-color: red;
-color: white;
-}
-.nav-link{
-color: white;
-}
-
-h5,h3,p5,h6{
-color:red;
-}
-h4,h6{
-padding-top:10px;
-color:red;
-}
-.ul-color{
-color:red;
-}
-#button-color{
-background-color:red;
-}
-dl,ol{
-color:red;
-}
-.col-md-2,.col-md-10{
-border:solid;
-border-color:red;
-}
-tr th,tr td,caption{
-text-align:center;
-vertical-align:middle;
-}
-table-bordered{
-border:solid;
-}
-label{
-color:red;
-}
-.body-color{
-background-color: #e3f2fd;
-}
-p6{
-color:green;
-}
-
-
-        </style>
+        <link rel="stylesheet" href="../../public/css/bootstrap.min.css"
+              th:href="@{/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" href="../../public/css/styles.css" th:href="@{/css/styles.css}"/>
+        <link rel="icon" href="../../public/images/menu/blood-donation-favicon.ico"
+              th:href="@{images/menu/blood-donation.ico}"/>
+        <script src="../../public/js/jquery-3.1.0.min.js" th:src="@{/js/jquery-3.1.0.min.js}"></script>
+        <script src="../../public/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
     </th:block>
 </head>
 <body>
@@ -80,13 +28,14 @@ color:green;
             </ul>
             <div class="row justify-content-end">
                 <form th:action="@{/logout}" method="post">
-                    <div th:if="${#httpServletRequest.remoteUser}" class="mr-4">
-                        <p th:inline="text" style="color:white">Здравей [[${#httpServletRequest.remoteUser}]] !</p>
+                    <div th:if="${#httpServletRequest.remoteUser}" class="mr-4 btn-padding">
+                        <p class="inline-block margin-bottom white-color" th:inline="text">Здравей
+                            [[${#httpServletRequest.remoteUser}]] !</p>
                         <button class="btn btn-white" type="submit">Изход</button>
                     </div>
                 </form>
                 <div th:unless="${#httpServletRequest.remoteUser}" class="mr-4">
-                    <a class="btn btn-white" href="../login" th:href="@{login}" role="button">Вход</a>
+                    <a class="btn btn-white" href="../login" th:href="@{/login}" role="button">Вход</a>
                 </div>
             </div>
         </div>

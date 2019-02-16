@@ -33,7 +33,7 @@ public class UserController {
     public String getMenuAdmin(Model model, String username) {
         User user = this.userService.findByUsername(username);
        /* String roleName = user.getRole().getRole();*/
-        if (user == null || user.getRole().getRole() == null) {
+        if (user == null || user.getRole()== null) {
             return "users/user";
         }
         model.addAttribute("user", user);

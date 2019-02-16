@@ -9,14 +9,14 @@
 <div>
     <div>
         <div th:include="fragments/fragments.html::#menu"></div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-4">
             <h4>Кръвни групи</h4>
             </br></br>
         </div>
         <div>
             <dl class="mx-4">
                 <dt>Кръвна група</dt>
-                <dd>съдържа информация за еритроцитите (червените кръвни телца) на даден индивид. Тя зависи от
+                <dd class="justify">съдържа информация за еритроцитите (червените кръвни телца) на даден индивид. Тя зависи от
                     веществата
                     (въглеводороди и белтъци) в клетъчната мембрана. Три от най-важните белега са A, B и 0 (AB0) и
                     резус-факторът (Rh). Има още 46 познати антигена, повечето от които са доста по-рядко срещани в
@@ -39,10 +39,10 @@
             <p class="mx-4">Според резус-фактора кръвните групи се делят на положителни и отрицателни.</p>
         </div>
         </br>
-        <div class="container">
+        <div class="center">
             <table class="table table-bordered table-red" style="border-color:red">
-                <caption>Таблица за съвместимост на червените кръвни клетки</caption>
-                <thead>
+                <caption class="center">Таблица за съвместимост на червените кръвни клетки</caption>
+                <thead class="center">
                 <tr>
                     <th rowspan="2" style="vertical-align:middle">Получател</th>
                     <th colspan="8">Кръводарител</th>
@@ -58,7 +58,7 @@
                     <th>AB+</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class="center">
                 <tr>
                     <th>O-</th>
                     <td><img src="../../images/menu/v.png" th:src="@{/images/menu/v.png}"></td>
@@ -152,15 +152,6 @@
         </div>
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+<div th:include="fragments/fragments.html::#footer" class="footer"></div>
 </body>
 </html>

@@ -23,48 +23,48 @@ public class PageControllerTest {
     @Test
     public void testGetBloodDonationCenterPage() throws Exception {
         this.mockMvc.perform(get("/blood-donation-center")).andDo(print()).andExpect(status().isOk())
-                .andExpect(view().name("pages/blood-donation-center"));
+                .andExpect(view().name("basicPages/blood-donation-center"));
 
     }
 
     @Test
     public void testGetBloodDonorsPage() throws Exception {
         this.mockMvc.perform(get("/blood-donors")).andDo(print()).andExpect(status().isOk())
-                .andExpect(view().name("pages/blood-donors"));
+                .andExpect(view().name("basicPages/blood-donors"));
 
     }
     @Test
     public void testGetBloodGrooupsPage() throws Exception {
         this.mockMvc.perform(get("/blood-groups")).andDo(print()).andExpect(status().isOk())
-                .andExpect(view().name("pages/blood-groups"));
+                .andExpect(view().name("basicPages/blood-groups"));
 
     }
 
     @Test
     public void testGetBloodRecipientsPage() throws Exception {
         this.mockMvc.perform(get("/blood-recipients")).andDo(print()).andExpect(status().isOk())
-                .andExpect(view().name("pages/blood-recipients"));
+                .andExpect(view().name("basicPages/blood-recipients"));
 
     }
 
     @Test
     public void testGetBloodTestingPage() throws Exception {
         this.mockMvc.perform(get("/blood-testing")).andDo(print()).andExpect(status().isOk())
-                .andExpect(view().name("pages/blood-testing"));
+                .andExpect(view().name("basicPages/blood-testing"));
 
     }
 
     @Test
     public void testGetBloodTransfusionPage() throws Exception {
         this.mockMvc.perform(get("/blood-transfusion")).andDo(print()).andExpect(status().isOk())
-                .andExpect(view().name("pages/blood-transfusion"));
+                .andExpect(view().name("basicPages/blood-transfusion"));
 
     }
 
     @Test
     public void testGetHomePage() throws Exception {
         this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-                .andExpect(view().name("pages/home"));
+                .andExpect(view().name("basicPages/home"));
 
     }
 }

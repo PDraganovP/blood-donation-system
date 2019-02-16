@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/fragments.html::#head"></div>
+    <title>Страницата не може да бъде намерена</title>
+</head>
+<body>
+</div>
+<div class="row justify-content-center">
+    <div class="text-align-center mt-5 mb-5">
+        <h1>Страницата не може да бъде намерена!</h1>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <a href="/" th:href="@{/}">
+        <button type="button" class="btn btn-primary button-color" id="button">Към начална страница
+        </button>
+    </a>
+</div>
+</body>
+</html>

@@ -132,7 +132,7 @@ public class BloodDonator {
         this.bloodDonations = bloodDonations;
     }
 
-    @ManyToOne(targetEntity = BloodDonationCenter.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = BloodDonationCenter.class)
     public BloodDonationCenter getBloodDonationCenter() {
         return bloodDonationCenter;
     }

@@ -3,15 +3,13 @@
 <head>
     <th:block id="head">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../../public/css/bootstrap.css"
-              th:href="@{/css/bootstrap.css}"/>
-        <link rel="stylesheet" href="../../public/css/style.css" th:href="@{/css/style.css}"/>
+        <link rel="stylesheet" href="../../public/css/bootstrap.min.css"
+              th:href="@{/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" href="../../public/css/styles.css" th:href="@{/css/styles.css}"/>
         <link rel="icon" href="../../public/images/menu/blood-donation-favicon.ico"
               th:href="@{images/menu/blood-donation.ico}"/>
         <script src="../../public/js/jquery-3.1.0.min.js" th:src="@{/js/jquery-3.1.0.min.js}"></script>
-        <script src="../../public/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
-        <!--<script src="../../public/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>-->
-
+        <script src="../../public/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
     </th:block>
 </head>
 <body>
@@ -26,15 +24,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto text-white">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/" th:href="@{/}">Начало<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/" th:href="@{/}" id="home">Начало<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item" th:unless="${#httpServletRequest.remoteUser}">
-                    <a class="nav-link" th:href="@{blood-donator-register}">Стани
+                    <a class="nav-link" th:href="@{blood-donator-register}" id="donator">Стани
                         кръводарител</a>
                 </li>
                 <li class="nav-item" th:unless="${#httpServletRequest.remoteUser}">
                     <a class="nav-link"
-                       th:href="@{blood-donation-center-register}">Добави кръводарителски център</a>
+                       th:href="@{blood-donation-center-register}" id="donation-center">Добави кръводарителски
+                        център</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -64,8 +64,9 @@
             </ul>
             <div class="row justify-content-end">
                 <form th:action="@{/logout}" method="post">
-                    <div th:if="${#httpServletRequest.remoteUser}" class="mr-4">
-                        <p6 th:inline="text" style="color:white">Здравей [[${#httpServletRequest.remoteUser}]] !</p6>
+                    <div th:if="${#httpServletRequest.remoteUser}" class="mr-4 btn-padding">
+                        <p class="inline-block margin-bottom white-color" th:inline="text">Здравей
+                            [[${#httpServletRequest.remoteUser}]] !</p>
                         <button class="btn btn-white" type="submit">Изход</button>
                     </div>
                 </form>
@@ -75,7 +76,9 @@
             </div>
         </div>
     </nav>
-    <br/><br/>
+</div>
+<div id="footer">
+    <p>&#169; 2019 ПДП</p>
 </div>
 </body>
 </html>

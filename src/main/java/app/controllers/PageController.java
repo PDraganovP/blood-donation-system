@@ -7,37 +7,37 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PageController {
     @GetMapping("/blood-donation-center")
     String getBloodDonationCenterPage() {
-        return "pages/blood-donation-center";
+        return "basicPages/blood-donation-center";
     }
 
     @GetMapping("/blood-donors")
     String getBloodDonorsPage() {
-        return "pages/blood-donors";
+        return "basicPages/blood-donors";
     }
 
     @GetMapping("/blood-groups")
     String getBloodGroupsPage() {
-        return "pages/blood-groups";
+        return "basicPages/blood-groups";
     }
 
     @GetMapping("/blood-recipients")
     String getBloodRecipientsPage() {
-        return "pages/blood-recipients";
+        return "basicPages/blood-recipients";
     }
 
     @GetMapping("/blood-testing")
     String getBloodTestingPage() {
-        return "pages/blood-testing";
+        return "basicPages/blood-testing";
     }
 
     @GetMapping("/blood-transfusion")
     String getBloodTransfusionPage() {
-        return "pages/blood-transfusion";
+        return "basicPages/blood-transfusion";
     }
 
     @GetMapping("/")
     String getHomePage() {
-        return "pages/home";
+        return "basicPages/home";
     }
 
 }

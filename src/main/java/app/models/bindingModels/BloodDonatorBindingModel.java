@@ -8,7 +8,7 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class EditBloodDonatorBindingModel {
+public class BloodDonatorBindingModel {
 
     private String username;
     private String firstName;
@@ -28,7 +28,7 @@ public class EditBloodDonatorBindingModel {
     private String street;
 
 
-    public EditBloodDonatorBindingModel() {
+    public BloodDonatorBindingModel() {
     }
 
     @Size(min = 5, max = 40, message = "Потребителското име трябва да е между 5 и 50 символа")

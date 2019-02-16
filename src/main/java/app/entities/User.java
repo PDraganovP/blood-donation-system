@@ -12,7 +12,6 @@ public class User {
     private BloodDonationCenter bloodDonationCenter;
     private Role role;
 
-
     public User() {
 
     }
@@ -27,7 +26,8 @@ public class User {
         this.id = id;
     }
 
-    @Column(name = "username")
+
+    @Column(name = "username",unique = true)
     public String getUsername() {
         return username;
     }
@@ -63,7 +63,7 @@ public class User {
         this.bloodDonationCenter = bloodDonationCenter;
     }
 
-    @ManyToOne(targetEntity = Role.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = Role.class)
     public Role getRole() {
         return role;
     }

@@ -2,7 +2,7 @@ package app.servicesImpl;
 
 import app.entities.*;
 import app.models.bindingModels.BloodDonatorRegistrationModel;
-import app.models.bindingModels.EditBloodDonatorBindingModel;
+import app.models.bindingModels.BloodDonatorBindingModel;
 import app.models.viewModels.BloodDonatorViewModel;
 import app.repositories.*;
 import app.services.BloodDonatorService;
@@ -36,7 +36,7 @@ public class BloodDonatorServiceImpl implements BloodDonatorService {
     private ModelMapper modelMapper;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
-    private static final String ROLE = "USER";
+    private final String ROLE = "USER";
 
 
     @Autowired
@@ -76,7 +76,6 @@ public class BloodDonatorServiceImpl implements BloodDonatorService {
 
     @Override
     public BloodDonatorViewModel findBloodDonatorByUsername(String username) {
-        //BloodDonatorViewModel bloodDOnatorViewMOdel=new BloodDonatorViewModel();
         BloodDonator bloodDonator = this.bloodDonatorRepository.findByUsername(username);
         if (bloodDonator == null) {
             return null;
@@ -95,9 +94,12 @@ public class BloodDonatorServiceImpl implements BloodDonatorService {
         for (BloodDonator donator : bloodDonator) {
             if (donator.isActiveBloodDonator()) {
                 BloodDonatorViewModel donatorViewModel = modelMapper.map(donator, BloodDonatorViewModel.class);
+                Address address = donator.getAddress();
 
-                String firstNameViewModel = donator.getAddress().getCity();
-                donatorViewModel.setCity(firstNameViewModel);
+                if (address != null) {
+                    String cityViewModel = donator.getAddress().getCity();
+                    donatorViewModel.setCity(cityViewModel);
+                }
                 bloodDonatorViewModels.add(donatorViewModel);
             }
         }
@@ -180,13 +182,12 @@ public class BloodDonatorServiceImpl implements BloodDonatorService {
         BloodDonation bloodDonation = new BloodDonation();
         bloodDonation.setBloodDonationDate(bloodDonationDate);
         bloodDonator.addDonation(bloodDonation);
-        // Calendar calendar=sdf.;
         bloodDonation.setBloodDonator(bloodDonator);
         this.bloodDonationRepository.save(bloodDonation);
     }
 
     @Override
-    public void edit(EditBloodDonatorBindingModel editBloodDonatorBindingModel) {
+    public void edit(BloodDonatorBindingModel bloodDonatorBindingModel) {
 
     }
 

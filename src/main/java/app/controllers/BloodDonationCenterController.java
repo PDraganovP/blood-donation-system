@@ -3,7 +3,7 @@ package app.controllers;
 
 import app.entities.Address;
 import app.models.bindingModels.BloodDonationCenterRegistrationModel;
-import app.models.viewModels.BloodDonationCenterViewModel;
+import app.models.bindingModels.BloodDonationCenterBindingModel;
 import app.models.viewModels.BloodDonatorViewModel;
 
 import app.services.BloodDonationCenterService;
@@ -49,7 +49,7 @@ public class BloodDonationCenterController {
         }
 
         this.bloodDonationCenterService.save(bloodDonationCenterRegistrationModel);
-        return "redirect:/successful";
+        return "redirect:/successfully-edited";
     }
 
     @GetMapping("/find-blood-donation-center-by-username")
@@ -59,7 +59,7 @@ public class BloodDonationCenterController {
 
     @PostMapping("/find-blood-donation-center-by-username")
     public String findByUsername(Model model, String username) {
-        BloodDonationCenterViewModel bloodDonationCenter = this.bloodDonationCenterService.findBloodDonationCenterByUsername(username);
+        BloodDonationCenterBindingModel bloodDonationCenter = this.bloodDonationCenterService.findBloodDonationCenterByUsername(username);
         if (username == "" || bloodDonationCenter == null) {
             return "blood-donation-centers/blood-donation-center";
         }
@@ -73,7 +73,7 @@ public class BloodDonationCenterController {
     @RequestMapping("/blood-donation-center-info")
     public String getBloodDonatorInfo(HttpServletRequest req, Model model) {
         String username = req.getRemoteUser();
-        BloodDonationCenterViewModel bloodDonationCenter = this.bloodDonationCenterService.findBloodDonationCenterByUsername(username);
+        BloodDonationCenterBindingModel bloodDonationCenter = this.bloodDonationCenterService.findBloodDonationCenterByUsername(username);
         model.addAttribute("bloodDonationCenter",bloodDonationCenter);
 
         return "blood-donation-centers/blood-donation-center-info";
@@ -90,10 +90,10 @@ public class BloodDonationCenterController {
         if(user==null){
             return "blood-donation-centers/edit-blood-donation-center";
         }
-        BloodDonationCenterViewModel bloodDonationCenter = this.bloodDonationCenterService.findBloodDonationCenterByUsername(user);
+        BloodDonationCenterBindingModel bloodDonationCenter = this.bloodDonationCenterService.findBloodDonationCenterByUsername(user);
         long id = bloodDonationCenter.getId();
         this.bloodDonationCenterService.editBloodDonationCenterById(name,address,id);
 
-        return "successful-edit";
+        return "successfully-edited";
     }
 }

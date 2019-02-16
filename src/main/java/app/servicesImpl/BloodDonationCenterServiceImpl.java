@@ -2,7 +2,7 @@ package app.servicesImpl;
 
 import app.entities.*;
 import app.models.bindingModels.BloodDonationCenterRegistrationModel;
-import app.models.viewModels.BloodDonationCenterViewModel;
+import app.models.bindingModels.BloodDonationCenterBindingModel;
 import app.repositories.*;
 import app.services.BloodDonationCenterService;
 import org.modelmapper.ModelMapper;
@@ -41,7 +41,6 @@ public class BloodDonationCenterServiceImpl implements BloodDonationCenterServic
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
     }
-
 
     @Override
     public List<BloodDonationCenter> findAll() {
@@ -84,13 +83,8 @@ public class BloodDonationCenterServiceImpl implements BloodDonationCenterServic
         user.setBloodDonationCenter(bloodDonationCenter);
         this.userRepository.save(user);
 
-        Role role=new Role();
-        role.setRole("USER");
-        this.roleRepository.save(role);
-
-        Role userRole = this.roleRepository.findByRole(role.getRole());
+        Role userRole = this.roleRepository.findByRole(ROLE);
         userRepository.setRole(userRole, user.getId());
-
 
         Contact contact = this.modelMapper.map(bloodDonationCenterRegistrationModel, Contact.class);
 
@@ -99,19 +93,17 @@ public class BloodDonationCenterServiceImpl implements BloodDonationCenterServic
 
         this.contactRepository.save(contact);
 
-
     }
 
     @Override
-    public BloodDonationCenterViewModel findBloodDonationCenterByUsername(String username) {
+    public BloodDonationCenterBindingModel findBloodDonationCenterByUsername(String username) {
         BloodDonationCenter bloodDonationCenter = this.bloodDonationCenterRepository.findByUsername(username);
         if (bloodDonationCenter == null) {
             return null;
         }
-        BloodDonationCenterViewModel bloodDonationCenterViewModel = this.modelMapper.map(bloodDonationCenter, BloodDonationCenterViewModel.class);
+        BloodDonationCenterBindingModel bloodDonationCenterBindingModel = this.modelMapper.map(bloodDonationCenter, BloodDonationCenterBindingModel.class);
 
-        return bloodDonationCenterViewModel;
-
+        return bloodDonationCenterBindingModel;
     }
 
     @Override
@@ -134,7 +126,11 @@ public class BloodDonationCenterServiceImpl implements BloodDonationCenterServic
         if (street != "") {
             newAddress.setStreet(street);
         }
+        String centerName = bloodDonationCenter.getName();
+        if (name != "") {
+            centerName = name;
+        }
 
-        this.bloodDonationCenterRepository.editBloodDonationCenterById(name, newAddress, id);
+        this.bloodDonationCenterRepository.editBloodDonationCenterById(centerName, newAddress, id);
     }
 }
